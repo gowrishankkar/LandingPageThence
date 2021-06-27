@@ -3,6 +3,7 @@ import styled from "styled-components";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import Fade from "react-reveal/Fade";
+import Button from '@material-ui/core/Button';
 
 function Header() {
   const [burgerStatus, setBurgerStatus] = useState(false);
@@ -27,7 +28,6 @@ function Header() {
           <li>
             <a href="#">Dev Challenges</a>
           </li>
-        
         </BurgerNav>
       </Fade>
     </Container>
@@ -53,14 +53,17 @@ const Container = styled.div`
 const Menu = styled.div`
   display: flex;
   align-items: center;
-  
+
   flex: 1;
 
   a {
-    font-weight: 600;
-    text-decoration: uppercase;
-    flex-wrap: no-wrap;
-    color: white;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #ffffff;
   }
 
   @media (min-width: 768) {

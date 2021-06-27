@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Header from "./components/Header";
 import Skills from "./components/Skills";
+import DesignChallenge from "./components/DesignChallenge";
 import "./App.css";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <TopFrame />
+      <DesignChallenge />
       <Skills />
       <BottomFrame />
     </div>

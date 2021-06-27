@@ -1,12 +1,12 @@
 *{
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik", "Bjola", sans-serif;
   box-sizing: border-box;
   color: #393c41;
   margin: 0;
   padding: 0;
 }
 
-body{
+body{ 
   width: 100%;
   overflow-x: hidden;
 }
