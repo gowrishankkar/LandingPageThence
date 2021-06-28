@@ -12,35 +12,24 @@ function App() {
       <TopFrame />
       <DesignChallenge />
       <Skills />
-      <BottomFrame />
+      <BottomFrame src="/images/bottom-bg-frame.jpg" />
     </div>
   );
 }
 
 export default App;
 
-const BottomFrame = styled.div`
-  width: 100wh;
-  height: 100vh;
+const BottomFrame = styled.img`
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("/images/bottom-bg-frame.jpg");
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  width: 100vw;
+ 
 `;
 
 const TopFrame = styled.div`
-  width: 100wh;
+  width: 100vw;
   height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("/images/top-bg-frame.jpg");
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 `;
