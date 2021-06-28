@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Header from "./components/Header";
 import Skills from "./components/Skills";
 import DesignChallenge from "./components/DesignChallenge";
-import { Provider as BusProvider, useBus } from "react-bus";
+import { Provider as BusProvider } from "react-bus";
 import "./App.css";
 import WebFont from 'webfontloader';
 
@@ -24,13 +24,6 @@ function App() {
         <TopFrame src="/images/top-bg-frame.jpg" />
         <DesignChallenge />
       </div>
-
-      {/* <Grid container spacing={3}>
-        <Grid item xs={4}> */}
-
-      {/* </Grid>
-      </Grid> */}
-
       <Skills />
       <BottomFrame src="/images/bottom-bg-frame.jpg" />
     </BusProvider>

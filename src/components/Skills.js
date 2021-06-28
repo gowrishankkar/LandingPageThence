@@ -32,6 +32,7 @@ export default function Skills() {
   const clearSkills = () => {
     details.map((skill) => {
       skill.selected = false;
+      
     });
     setDetails(details);
     setSelectedCount(0);
