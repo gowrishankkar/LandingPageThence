@@ -3,22 +3,54 @@ import styled from "styled-components";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import Fade from "react-reveal/Fade";
-import Button from '@material-ui/core/Button';
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
 
+const useStyles = makeStyles({
+  root: {
+    background: "linear-gradient(135deg, #FD8B11 0%, #FECA01 100%)",
+    borderRadius: "10px",
+    border: 0,
+    color: "white",
+    height: 48,
+    padding: "0 30px",
+    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+  },
+  label: {
+    fontWeight: "900",
+    fontSize: "16px",
+    lineHeight: "16px",
+    color: "#1E184D",
+  },
+});
 function Header() {
   const [burgerStatus, setBurgerStatus] = useState(false);
+  const classes = useStyles();
 
   return (
     <Container>
       <RightMenu>
         <Menu>
           <a href="#">Dev Challenges</a>
-
           <a href="#">Articles</a>
-
           <a href="#">Workshops</a>
+
+          <Button
+            classes={{
+              root: classes.root, // class name, e.g. `classes-nesting-root-x`
+              label: classes.label, // class name, e.g. `classes-nesting-label-x`
+            }}
+          >
+            {" "}
+            Dev Sign In
+          </Button>
         </Menu>
-        <CustomMenu onClick={() => setBurgerStatus(true)} />
+        <CustomMenu>
+          <MenuIcon
+            onClick={() => setBurgerStatus(true)}
+            style={{ fill: "white" }}
+          />
+        </CustomMenu>
       </RightMenu>
       <Fade right>
         <BurgerNav show={burgerStatus}>
@@ -27,6 +59,15 @@ function Header() {
           </CloseWrapper>
           <li>
             <a href="#">Dev Challenges</a>
+          </li>
+          <li>
+            <a href="#">Articles</a>
+          </li>
+          <li>
+            <a href="#">workshopes</a>
+          </li>
+          <li>
+            <a href="#">Dev Sign in </a>
           </li>
         </BurgerNav>
       </Fade>
@@ -66,14 +107,13 @@ const Menu = styled.div`
     color: #ffffff;
   }
 
-  @media (min-width: 768) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 
 const RightMenu = styled.div`
   display: flex;
-
   padding: 15px;
   a {
     font-weight: 600;
@@ -83,7 +123,12 @@ const RightMenu = styled.div`
   }
 `;
 
-const CustomMenu = styled(MenuIcon)``;
+const CustomMenu = styled.div`
+  @media screen and (min-width: 769px) {
+  display: none;
+  }
+
+}`;
 
 const CustomClose = styled(CloseIcon)`
   cursor: pointer;
@@ -115,10 +160,13 @@ const BurgerNav = styled.div`
     }
   }
 
-  @media (max-width: 768) {
+
+  @media screen and (min-width: 769px) {
+ 
     display: none;
+
   }
-`;
+}`;
 
 const CloseWrapper = styled.div`
   display: flex;

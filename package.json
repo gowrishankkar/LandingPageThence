@@ -10,11 +10,15 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "react": "^17.0.2",
+    "react-bus": "^3.0.0",
     "react-dom": "^17.0.2",
+    "react-event-bus": "^1.1.0",
     "react-redux": "^7.2.4",
     "react-reveal": "^1.2.2",
     "react-scripts": "4.0.3",
-    "styled-components": "^5.3.0"
+    "styled-components": "^5.3.0",
+    "use-force-update": "^1.0.7",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "react-scripts start",

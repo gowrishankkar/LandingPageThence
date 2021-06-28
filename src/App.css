@@ -37,3 +37,18 @@
     transform: translateY(0px);
   }
 }
+
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans+Bjola+Rubik');
+
+body {
+  font-family: 'Josefin Sans', "Rubik", "Bjola", cursive;
+}
+
+*{
+  font-family: "Rubik", "Bjola", sans-serif;
+  box-sizing: border-box;
+  color: #393c41;
+  margin: 0;
+  padding: 0;
+}

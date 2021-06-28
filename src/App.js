@@ -1,19 +1,39 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styled from "styled-components";
 import Header from "./components/Header";
 import Skills from "./components/Skills";
 import DesignChallenge from "./components/DesignChallenge";
+import { Provider as BusProvider, useBus } from "react-bus";
 import "./App.css";
+import WebFont from 'webfontloader';
 
 function App() {
+
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['Droid Sans', 'Chilanka', 'Bjola']
+      }
+    });
+   }, []);
+
   return (
-    <div className="App">
+    <BusProvider className="App">
       <Header />
-      <TopFrame />
-      <DesignChallenge />
+      <div>
+        <TopFrame src="/images/top-bg-frame.jpg" />
+        <DesignChallenge />
+      </div>
+
+      {/* <Grid container spacing={3}>
+        <Grid item xs={4}> */}
+
+      {/* </Grid>
+      </Grid> */}
+
       <Skills />
       <BottomFrame src="/images/bottom-bg-frame.jpg" />
-    </div>
+    </BusProvider>
   );
 }
 
@@ -22,14 +42,16 @@ export default App;
 const BottomFrame = styled.img`
   background-size: cover;
   width: 100vw;
- 
 `;
 
-const TopFrame = styled.div`
+const TopFrame = styled.img`
   width: 100vw;
-  height: 100vh;
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/images/top-bg-frame.jpg");
+
+  @media screen and (min-width: 769px) {
+    height: 100vh;
+  }
 `;
